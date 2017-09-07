@@ -2,3 +2,9 @@
 body {
   background-color: #34495e;
 }
+
+h5 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
