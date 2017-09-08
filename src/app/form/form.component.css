@@ -13,3 +13,7 @@
 ::-ms-input-placeholder { /* Microsoft Edge */
  color: #34495e;
 }
+
+.e-name {
+  color: #1abc9c;
+}
