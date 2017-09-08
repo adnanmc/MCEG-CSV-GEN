@@ -5,22 +5,12 @@
         <h5>Click Desired Event</h5>
       </div>
       <div class="row">
-        <a class="waves-effect waves-light btn btn-evt">OUT</a>
-        <a class="waves-effect waves-light btn btn-evt">OFF</a>
-        <a class="waves-effect waves-light btn btn-evt">ON</a>
-        <a class="waves-effect waves-light btn btn-evt">IN</a>
-        <a class="waves-effect waves-light btn btn-evt">ETA</a>
-        <a class="waves-effect waves-light btn btn-evt">ETD</a>
-        <a class="waves-effect waves-light btn btn-evt">ETO</a>
-        <a class="waves-effect waves-light btn btn-evt">EON</a>
+        <a class="waves-effect waves-light btn btn-evt"
+           *ngFor="let eventName of events"
+           (click)="whichEvent(eventName)"
+           >{{eventName | uppercase}}
+        </a>
       </div>
-
-      <div class="row">
-        <a class="waves-effect waves-light btn btn-evt">SUB</a>
-        <a class="waves-effect waves-light btn btn-evt">CNL</a>
-        <a class="waves-effect waves-light btn btn-evt">DEL</a>
-      </div>
-
   </div>
 
 </div>

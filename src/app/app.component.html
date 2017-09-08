@@ -4,7 +4,7 @@
   </div>
 </nav>
 <div class="container">
-    <app-events></app-events>
+    <app-events (eventTypeClick)='grabEventName($event)'></app-events>
     <app-form></app-form>
     <app-que></app-que>
 </div>
