@@ -5,6 +5,6 @@
 </nav>
 <div class="container">
     <app-events (eventTypeClick)='grabEventName($event)'></app-events>
-    <app-form></app-form>
+    <app-form [eventName]='eventName'></app-form>
     <app-que></app-que>
 </div>

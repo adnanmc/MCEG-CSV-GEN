@@ -16,7 +16,6 @@ events: any = ['out', 'off', 'on', 'in', 'eta', 'etd', 'eto', 'eon', 'sub', 'cnl
 whichEvent(event) {
   event = event.toUpperCase();
   this.eventTypeClick.emit(event);
-  // console.log(event);
 }
 
 
