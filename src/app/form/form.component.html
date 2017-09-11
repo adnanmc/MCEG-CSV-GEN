@@ -3,37 +3,177 @@
       <div class="row">
           <h5>Add Details For: <span class="e-name">{{eventName}}</span></h5>
       </div>
-      <div class="row">
-        <div class="input-field col s3">
-          <input placeholder="Flight Number" type="text">
-        </div>
-        <div class="input-field col s3">
-          <input placeholder="Desired Out Time" type="text">
-        </div>
-        <div class="input-field col s3">
-          <input placeholder="Desired Out Time" type="text">
-        </div>
-        <div class="input-field col s3">
-          <input placeholder="Desired Out Time" type="text">
-        </div>
 
-      </div>
-      <div class="row">
-        <div class="input-field col s3">
-          <input placeholder="Desired Out Time" type="text">
+      <!-- out -->
+      <div *ngIf="[eventName] == 'OUT'">
+        <div class="row" >
+          <div class="input-field col s6">
+            <input placeholder="Flight Number" type="text">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Desired OUT Time" type="text">
+          </div>
         </div>
-        <div class="input-field col s3">
-          <input placeholder="Desired Out Time" type="text">
-        </div>
-        <div class="input-field col s3">
-          <input placeholder="Desired Out Time" type="text">
-        </div>
-        <div class="input-field col s3">
-          <input placeholder="Desired Out Time" type="text">
-        </div>
-      </div>
-      <div class="row">
+        <!-- submit -->
+        <div class="row">
           <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
       </div>
+
+      <!-- off -->
+      <div *ngIf="[eventName] == 'OFF'">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Flight Number" type="text">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Desired OFF Time" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+      <!-- on -->
+      <div *ngIf="[eventName] == 'ON'">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Flight Number" type="text">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Desired ON Time" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+      <!-- in -->
+      <div *ngIf="[eventName] == 'IN'">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Flight Number" type="text">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Desired IN Time" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+      <!-- eta -->
+      <div *ngIf="[eventName] == 'ETA'">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Flight Number" type="text">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Desired ETA Time" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+      <!-- etd -->
+      <div *ngIf="[eventName] == 'ETD'">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Flight Number" type="text">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Desired ETD Time" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+      <!-- eto -->
+      <div *ngIf="[eventName] == 'ETO'">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Flight Number" type="text">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Desired ETO Time" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+      <!-- eon -->
+      <div *ngIf="[eventName] == 'EON'">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Flight Number" type="text">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Desired EON Time" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+      <!-- sub -->
+      <div *ngIf="[eventName] == 'SUB'">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Flight Number" type="text">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="New Tail Number (3 digit)" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+      <!-- cnl -->
+      <div *ngIf="[eventName] == 'CNL'">
+        <div class="row">
+          <div class="input-field col s6 offset-s3">
+            <input placeholder="Flight Number" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+      <!-- del -->
+      <div *ngIf="[eventName] == 'DEL'">
+        <div class="row">
+          <div class="input-field col s6 offset-s3">
+            <input placeholder="Flight Number" type="text">
+          </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+          <a class="waves-effect waves-light btn">Add to Que</a>
+        </div>
+      </div>
+
+
     </div>
 </div>
