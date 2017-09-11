@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MaterializeModule } from 'ng2-materialize';
 
 import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
 import { FormComponent } from './form/form.component';
 import { QueComponent } from './que/que.component';
+import { EventService } from './services/event.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { QueComponent } from './que/que.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     MaterializeModule.forRoot()
   ],
-  providers: [],
+  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

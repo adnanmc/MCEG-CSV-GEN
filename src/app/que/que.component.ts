@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EventRow } from '../models/event-row';
+import { EventService } from '../services/event.service';
 
 @Component({
   selector: 'app-que',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QueComponent implements OnInit {
 
-  constructor() { }
+  allEvents: EventRow[];
+
+  constructor(public eventService: EventService) { }
 
   ngOnInit() {
+    this.allEvents = this.eventService.getEvents();
+
+  }
+
+  removeEvent(event: EventRow) {
+    this.eventService.removeEvent(event);
   }
 
 }
