@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { EventRow } from './models/event-row';
 import { EventService } from './services/event.service';
 
@@ -7,7 +7,7 @@ import { EventService } from './services/event.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   // event name
   eventName: string;
 
@@ -17,9 +17,17 @@ export class AppComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-    this.allEvents = this.eventService.getEvents();
+  // fix flight num if its 3 digit or less
+  fixFlightNum(flight_number) {
+    if (flight_number.length === 1) {
+      flight_number = '000' + flight_number;
+    } else if (flight_number.length === 2) {
+      flight_number = '00' + flight_number;
+    } else if (flight_number.length === 3) {
+      flight_number = '0' + flight_number;
+    }
 
+    return flight_number;
   }
 
   // grabbing event name based on button click on child component
@@ -29,10 +37,11 @@ export class AppComponent implements OnInit {
     // console.log(this.eventName);
   }
 
-  addOutEvent(object: EventRow) {
-    console.log(object);
+  addEvent(object: EventRow) {
+    object.flight_number = this.fixFlightNum(object.flight_number);
+    console.log(object.flight_number);
     this.eventService.addEvent(object);
-    console.log(this.allEvents);
+    // console.log(this.allEvents);
 
   }
 }

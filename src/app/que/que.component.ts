@@ -9,7 +9,7 @@ import { EventService } from '../services/event.service';
 })
 export class QueComponent implements OnInit {
 
-  allEvents: EventRow[];
+  allEvents: EventRow[] = [];
 
   constructor(public eventService: EventService) { }
 
