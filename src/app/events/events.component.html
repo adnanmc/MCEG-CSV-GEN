@@ -6,9 +6,10 @@
       </div>
       <div class="row">
         <a class="waves-effect waves-light btn btn-evt"
-           *ngFor="let eventName of events"
-           (click)="whichEvent(eventName)"
-           >{{eventName | uppercase}}
+           *ngFor="let event of events"
+           (click)="whichEvent(event)"
+           [ngClass]="{'btn-selected' : event.active}"
+           >{{event.type | uppercase}}
         </a>
       </div>
   </div>

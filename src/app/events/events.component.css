@@ -2,3 +2,7 @@
 .btn-evt {
   margin: 1%;
 }
+
+.btn-selected {
+  background: #e74c3c;
+}
