@@ -15,7 +15,7 @@ export class EventService {
 
   // add event to local storage
   addEvent(eventRow: EventRow) {
-    this.allEvents.unshift(eventRow);
+    this.allEvents.push(eventRow);
     return this.allEvents;
   }
 
