@@ -39,7 +39,7 @@ export class AppComponent {
 
   addEvent(object: EventRow) {
     object.flight_number = this.fixFlightNum(object.flight_number);
-    console.log(object.flight_number);
+    // console.log(object.flight_number);
     this.eventService.addEvent(object);
     // console.log(this.allEvents);
 

@@ -16,7 +16,7 @@ export class FormComponent {
   @Output('eventAdded') eventAdded = new EventEmitter<EventRow>();
 
   // define ngModels for databinding
-  eName: string;
+  event_type: string;
   flight_number: string;
   actual_out_time_utc: string;
   actual_off_time_utc: string;
@@ -45,7 +45,7 @@ export class FormComponent {
   submitOUT() {
 
     this.eventAdded.emit({
-      eName: 'OUT',
+      event_type: 'OUT',
       flight_number: this.flight_number,
       actual_out_time_utc: this.actual_out_time_utc,
       actual_off_time_utc: '',
@@ -66,7 +66,7 @@ export class FormComponent {
   submitOFF() {
 
     this.eventAdded.emit({
-      eName: 'OFF',
+      event_type: 'OFF',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: this.actual_off_time_utc,
@@ -87,7 +87,7 @@ export class FormComponent {
   submitON() {
 
     this.eventAdded.emit({
-      eName: 'ON',
+      event_type: 'ON',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: '',
@@ -108,7 +108,7 @@ export class FormComponent {
   submitIN() {
 
     this.eventAdded.emit({
-      eName: 'IN',
+      event_type: 'IN',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: '',
@@ -129,7 +129,7 @@ export class FormComponent {
   submitETA() {
 
     this.eventAdded.emit({
-      eName: 'ETA',
+      event_type: 'ETA',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: '',
@@ -150,7 +150,7 @@ export class FormComponent {
   submitETD() {
 
     this.eventAdded.emit({
-      eName: 'ETD',
+      event_type: 'ETD',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: '',
@@ -171,7 +171,7 @@ export class FormComponent {
   submitETO() {
 
     this.eventAdded.emit({
-      eName: 'ETO',
+      event_type: 'ETO',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: '',
@@ -192,7 +192,7 @@ export class FormComponent {
   submitEON() {
 
     this.eventAdded.emit({
-      eName: 'EON',
+      event_type: 'EON',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: '',
@@ -213,7 +213,7 @@ export class FormComponent {
   submitSUB() {
 
     this.eventAdded.emit({
-      eName: 'SUB',
+      event_type: 'SUB',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: '',
@@ -234,7 +234,7 @@ export class FormComponent {
   submitCNL() {
 
     this.eventAdded.emit({
-      eName: 'CNL',
+      event_type: 'CNL',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: '',
@@ -255,7 +255,7 @@ export class FormComponent {
   submitDEL() {
 
     this.eventAdded.emit({
-      eName: 'DEL',
+      event_type: 'DEL',
       flight_number: this.flight_number,
       actual_out_time_utc: '',
       actual_off_time_utc: '',

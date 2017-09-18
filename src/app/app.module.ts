@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MaterializeModule } from 'ng2-materialize';
+import { PapaParseModule } from 'ngx-papaparse';
 
 import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
@@ -19,7 +20,8 @@ import { EventService } from './services/event.service';
   imports: [
     BrowserModule,
     FormsModule,
-    MaterializeModule.forRoot()
+    MaterializeModule.forRoot(),
+    PapaParseModule
   ],
   providers: [EventService],
   bootstrap: [AppComponent]

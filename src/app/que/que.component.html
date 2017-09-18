@@ -6,48 +6,48 @@
     <div class="row que-collection">
       <ul class="collection" *ngFor="let event of allEvents">
 
-        <li class="collection-item que-item" *ngIf="event.eName == 'OUT'">
-          Flight {{event.flight_number}} {{event.eName}} @ {{event.actual_out_time_utc}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'OUT'">
+          Flight {{event.flight_number}} {{event.event_type}} @ {{event.actual_out_time_utc}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'OFF'">
-          Flight {{event.flight_number}} {{event.eName}} @ {{event.actual_off_time_utc}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'OFF'">
+          Flight {{event.flight_number}} {{event.event_type}} @ {{event.actual_off_time_utc}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'ON'">
-          Flight {{event.flight_number}} {{event.eName}} @ {{event.actual_on_time_utc}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'ON'">
+          Flight {{event.flight_number}} {{event.event_type}} @ {{event.actual_on_time_utc}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'IN'">
-          Flight {{event.flight_number}} {{event.eName}} @ {{event.actual_in_time_utc}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'IN'">
+          Flight {{event.flight_number}} {{event.event_type}} @ {{event.actual_in_time_utc}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'ETA'">
-          Flight {{event.flight_number}} {{event.eName}} @ {{event.actual_eta_time_utc}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'ETA'">
+          Flight {{event.flight_number}} {{event.event_type}} @ {{event.actual_eta_time_utc}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'ETD'">
-          Flight {{event.flight_number}} {{event.eName}} @ {{event.actual_etd_time_utc}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'ETD'">
+          Flight {{event.flight_number}} {{event.event_type}} @ {{event.actual_etd_time_utc}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'ETO'">
-          Flight {{event.flight_number}} {{event.eName}} @ {{event.actual_eto_time_utc}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'ETO'">
+          Flight {{event.flight_number}} {{event.event_type}} @ {{event.actual_eto_time_utc}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'EON'">
-          Flight {{event.flight_number}} {{event.eName}} @ {{event.actual_eon_time_utc}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'EON'">
+          Flight {{event.flight_number}} {{event.event_type}} @ {{event.actual_eon_time_utc}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'SUB'">
-          Flight {{event.flight_number}} {{event.eName}} @ Tail: {{event.new_tail_number}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'SUB'">
+          Flight {{event.flight_number}} {{event.event_type}} @ Tail: {{event.new_tail_number}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'CNL'">
-          Flight {{event.flight_number}} {{event.eName}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'CNL'">
+          Flight {{event.flight_number}} {{event.event_type}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
-        <li class="collection-item que-item" *ngIf="event.eName == 'DEL'">
-          Flight {{event.flight_number}} {{event.eName}}
+        <li class="collection-item que-item" *ngIf="event.event_type == 'DEL'">
+          Flight {{event.flight_number}} {{event.event_type}}
           <a href="#!"><i class="material-icons secondary-content" (click)="removeEvent(event)">highlight_off</i></a>
         </li>
       </ul>
@@ -56,5 +56,5 @@
   </div>
 </div>
 <div class="row center">
-    <a class="waves-effect waves-light btn">Download CSV</a>
+    <a class="waves-effect waves-light btn" (click)="downloadCSV()">Download CSV</a>
 </div>
