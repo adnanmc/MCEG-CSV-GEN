@@ -29,6 +29,18 @@ export class AppComponent {
 
     return flight_number;
   }
+  // fix time if its 3 digit or less
+  fixTime(time) {
+    if (time.length === 1) {
+      time = '000' + time;
+    } else if (time.length === 2) {
+      time = '00' + time;
+    } else if (time.length === 3) {
+      time = '0' + time;
+    }
+
+    return time;
+  }
 
   // grabbing event name based on button click on child component
   grabEventName(name) {
@@ -39,6 +51,14 @@ export class AppComponent {
 
   addEvent(object: EventRow) {
     object.flight_number = this.fixFlightNum(object.flight_number);
+    object.actual_out_time_utc = this.fixTime(object.actual_out_time_utc);
+    object.actual_off_time_utc = this.fixTime(object.actual_off_time_utc);
+    object.actual_on_time_utc = this.fixTime(object.actual_on_time_utc);
+    object.actual_in_time_utc = this.fixTime(object.actual_in_time_utc);
+    object.actual_eta_time_utc = this.fixTime(object.actual_eta_time_utc);
+    object.actual_etd_time_utc = this.fixTime(object.actual_etd_time_utc);
+    object.actual_eto_time_utc = this.fixTime(object.actual_eto_time_utc);
+    object.actual_eon_time_utc = this.fixTime(object.actual_eon_time_utc);
     // console.log(object.flight_number);
     this.eventService.addEvent(object);
     // console.log(this.allEvents);
