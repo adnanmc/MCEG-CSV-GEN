@@ -8,8 +8,6 @@ import { EventService } from './services/event.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // event name
-  eventName: string;
 
   allEvents: EventRow[];
 
@@ -40,13 +38,6 @@ export class AppComponent {
     }
 
     return time;
-  }
-
-  // grabbing event name based on button click on child component
-  grabEventName(name) {
-    name = name.toString();
-    this.eventName = name;
-    // console.log(this.eventName);
   }
 
   addEvent(object: EventRow) {

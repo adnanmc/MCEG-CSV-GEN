@@ -5,7 +5,6 @@ import { MaterializeModule } from 'ng2-materialize';
 import { PapaParseModule } from 'ngx-papaparse';
 
 import { AppComponent } from './app.component';
-import { EventsComponent } from './events/events.component';
 import { FormComponent } from './form/form.component';
 import { QueComponent } from './que/que.component';
 import { EventService } from './services/event.service';
@@ -13,7 +12,6 @@ import { EventService } from './services/event.service';
 @NgModule({
   declarations: [
     AppComponent,
-    EventsComponent,
     FormComponent,
     QueComponent
   ],

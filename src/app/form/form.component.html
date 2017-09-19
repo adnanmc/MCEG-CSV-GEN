@@ -1,4 +1,22 @@
 <div class="row center">
+  <div class="card-panel">
+      <div class="row">
+        <h5>Click Desired Event</h5>
+      </div>
+      <div class="row">
+        <a class="waves-effect waves-light btn btn-evt"
+           *ngFor="let event of events"
+           (click)="whichEvent(event)"
+           [ngClass]="{'btn-selected' : event.active}"
+           >{{event.type | uppercase}}
+        </a>
+      </div>
+  </div>
+
+</div>
+
+
+<div class="row center">
     <div class="card-panel">
       <div class="row">
           <h5>Add Details For: <span class="e-name">{{eventName}}</span></h5>
@@ -17,7 +35,7 @@
                       required minlength="1" maxlength="4" pattern="^[0-9]*$">
             </div>
             <div class="input-field col s6">
-              <input placeholder="Desired OUT Time (UTC: hhmm)"
+              <input placeholder="Desired OUT Time in UTC (hhmm)"
                      type="text"
                      [(ngModel)]="actual_out_time_utc"
                      name="actual_out_time_utc"
@@ -47,7 +65,7 @@
                      required minlength="1" maxlength="4" pattern="^[0-9]*$">
             </div>
             <div class="input-field col s6">
-              <input placeholder="Desired OUT Time (UTC: hhmm)"
+              <input placeholder="Desired OFF Time in UTC (hhmm)"
                      type="text"
                      [(ngModel)]="actual_off_time_utc"
                      name="actual_off_time_utc"
@@ -78,7 +96,7 @@
                      required minlength="1" maxlength="4" pattern="^[0-9]*$">
             </div>
             <div class="input-field col s6">
-              <input placeholder="Desired OUT Time (UTC: hhmm)"
+              <input placeholder="Desired ON Time in UTC (hhmm)"
                      type="text"
                      [(ngModel)]="actual_on_time_utc"
                      name="actual_on_time_utc"
@@ -109,7 +127,7 @@
                      required minlength="1" maxlength="4" pattern="^[0-9]*$">
             </div>
             <div class="input-field col s6">
-              <input placeholder="Desired OUT Time (UTC: hhmm)"
+              <input placeholder="Desired IN Time in UTC (hhmm)"
                      type="text"
                      [(ngModel)]="actual_in_time_utc"
                      name="actual_in_time_utc"
@@ -140,7 +158,7 @@
                      required minlength="1" maxlength="4" pattern="^[0-9]*$">
             </div>
             <div class="input-field col s6">
-              <input placeholder="Desired OUT Time (UTC: hhmm)"
+              <input placeholder="Desired ETA Time in UTC (hhmm)"
                      type="text"
                      [(ngModel)]="actual_eta_time_utc"
                      name="actual_eta_time_utc"
@@ -171,7 +189,7 @@
                      required minlength="1" maxlength="4" pattern="^[0-9]*$">
             </div>
             <div class="input-field col s6">
-              <input placeholder="Desired OUT Time (UTC: hhmm)"
+              <input placeholder="Desired ETD Time in UTC (hhmm)"
                      type="text"
                      [(ngModel)]="actual_etd_time_utc"
                      name="actual_etd_time_utc"
@@ -202,7 +220,7 @@
                      required minlength="1" maxlength="4" pattern="^[0-9]*$">
             </div>
             <div class="input-field col s6">
-              <input placeholder="Desired OUT Time (UTC: hhmm)"
+              <input placeholder="Desired ETO Time in UTC (hhmm)"
                      type="text"
                      [(ngModel)]="actual_eto_time_utc"
                      name="actual_eto_time_utc"
@@ -233,7 +251,7 @@
                      required minlength="1" maxlength="4" pattern="^[0-9]*$">
             </div>
             <div class="input-field col s6">
-              <input placeholder="Desired OUT Time (UTC: hhmm)"
+              <input placeholder="Desired EON Time in UTC (hhmm)"
                      type="text"
                      [(ngModel)]="actual_eon_time_utc"
                      name="actual_eon_time_utc"

@@ -8,12 +8,57 @@ import { EventRow } from '../models/event-row';
 })
 export class FormComponent {
 
-
-  // getting data from event component
-  @Input() eventName: string;
-
   // defining output event for all events
   @Output('eventAdded') eventAdded = new EventEmitter<EventRow>();
+
+  eventName: string;
+  // defining all the available events
+  events: any = [
+    {
+      type: 'out',
+      active: false
+    },
+    {
+      type: 'off',
+      active: false
+    },
+    {
+      type: 'on',
+      active: false
+    },
+    {
+      type: 'in',
+      active: false
+    },
+    {
+      type: 'eta',
+      active: false
+    },
+    {
+      type: 'etd',
+      active: false
+    },
+    {
+      type: 'eto',
+      active: false
+    },
+    {
+      type: 'eon',
+      active: false
+    },
+    {
+      type: 'sub',
+      active: false
+    },
+    {
+      type: 'cnl',
+      active: false
+    },
+    {
+      type: 'del',
+      active: false
+    }
+  ];
 
   // define ngModels for databinding
   event_type: string;
@@ -28,6 +73,7 @@ export class FormComponent {
   actual_eon_time_utc: string;
   new_tail_number: string;
 
+
   resetBinding() {
     this.flight_number = null;
     this.actual_out_time_utc = null;
@@ -40,6 +86,22 @@ export class FormComponent {
     this.actual_eon_time_utc = null;
     this.new_tail_number = null;
   }
+
+
+  // function that handles the event emit
+  whichEvent(event) {
+    this.eventName = event.type;
+    this.events.forEach((e) => {
+      if (e.type === event.type) {
+        e.active = true;
+      } else {
+        e.active = false;
+      }
+    });
+    this.eventName = this.eventName.toUpperCase();
+    this.resetBinding();
+  }
+
 
   // out form submit
   submitOUT() {
