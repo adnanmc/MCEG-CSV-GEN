@@ -117,7 +117,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: '',
       actual_eon_time_utc: '',
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();
@@ -138,7 +139,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: '',
       actual_eon_time_utc: '',
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();
@@ -159,7 +161,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: '',
       actual_eon_time_utc: '',
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();
@@ -180,7 +183,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: '',
       actual_eon_time_utc: '',
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();
@@ -201,7 +205,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: '',
       actual_eon_time_utc: '',
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();
@@ -222,7 +227,8 @@ export class FormComponent {
       actual_etd_time_utc: this.actual_etd_time_utc,
       actual_eto_time_utc: '',
       actual_eon_time_utc: '',
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();
@@ -243,7 +249,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: this.actual_eto_time_utc,
       actual_eon_time_utc: '',
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();
@@ -264,7 +271,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: '',
       actual_eon_time_utc: this.actual_eon_time_utc,
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();
@@ -285,7 +293,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: '',
       actual_eon_time_utc: '',
-      new_tail_number: this.new_tail_number
+      new_tail_number: this.new_tail_number,
+      test_result: ''
     });
 
     this.resetBinding();
@@ -306,7 +315,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: '',
       actual_eon_time_utc: '',
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();
@@ -327,7 +337,8 @@ export class FormComponent {
       actual_etd_time_utc: '',
       actual_eto_time_utc: '',
       actual_eon_time_utc: '',
-      new_tail_number: ''
+      new_tail_number: '',
+      test_result: ''
     });
 
     this.resetBinding();

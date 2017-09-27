@@ -10,4 +10,5 @@ export interface EventRow {
   actual_eto_time_utc: string;
   actual_eon_time_utc: string;
   new_tail_number: string;
+  test_result: string;
 }
