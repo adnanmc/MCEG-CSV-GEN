@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { EventRow } from '../models/event-row';
 
 @Component({
@@ -6,7 +6,7 @@ import { EventRow } from '../models/event-row';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent {
+export class FormComponent implements OnInit {
 
   // defining output event for all events
   @Output('eventAdded') eventAdded = new EventEmitter<EventRow>();
@@ -60,6 +60,10 @@ export class FormComponent {
     }
   ];
 
+  // utc date time
+  utcDateNow: string;
+  utcTimeNow: string;
+
   // define ngModels for databinding
   event_type: string;
   flight_number: string;
@@ -72,6 +76,24 @@ export class FormComponent {
   actual_eto_time_utc: string;
   actual_eon_time_utc: string;
   new_tail_number: string;
+
+  currentDateTimeUTC() {
+    setInterval(() => {
+      const dateNow = new Date();
+      this.utcDateNow = (dateNow.getUTCMonth() + 1).toString() + '/' +
+                        dateNow.getUTCDate().toString() + '/' +
+                        dateNow.getUTCFullYear().toString();
+      this.utcTimeNow = dateNow.getUTCHours().toString() + ':' +
+                        dateNow.getUTCMinutes().toString() + ':' +
+                        dateNow.getUTCSeconds().toString();
+
+     }, 1000);
+  }
+
+  ngOnInit() {
+
+    this.currentDateTimeUTC();
+  }
 
 
   resetBinding() {
